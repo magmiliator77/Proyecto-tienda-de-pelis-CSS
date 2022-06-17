@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    font-family: "Arial, HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
+    /* Para que la ventana emergente de las peliculas se adapte a pantallas estrechas */
+}
+
+header {
+    /* text-align: left; */
+    width: 100%;
+}
+
+h2 {
+    padding: 20px;
+    color: rgba(17, 6, 6, 0.664);
+    font-size: 50px;
+}
+
+p {
+    color: black;
+}
+
+body {
+    /* Tema navideño */
+  /*  background-image: url(http://practicasbyjmtm.x10host.com/unidad3/actividades/actividad1/Tienda-online-de-pel%C3%ADculas/multimedia/images/fondos/navidad.png); */
+    /* Color por defecto */
+     background-color: #f0f6fc;  
+    /* background-color: #2c2a2a;  */
+    /* Tema Oscuro */
+}
+
+/* Logo */
+
+.logo_estilo {
+    width: 100px 50px;
+    margin: 0;
+}
+
+.logo_estilo img {
+    width: 100%;
+}
+
+/* Cabecera */
+
+.cabecera {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: url("../multimedia/images/barra/camp.png");
+    background-color: rgba(0, 0, 0, .3);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* Nuevo Menú */
+
+header {
+    width: 100%;
+    height: 60px;
+    background: #55b66a;
+    position: sticky;
+    /* Menú pegajoso */
+    top: 0px;
+    /* Distancia a la que se pega el menú */
+}
+
+#menu-boton {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label :hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+}
+
+.menu li :hover {
+    width: 100;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:990px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: #55b66a;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    #menu-boton:checked~.menu {
+        margin: 0;
+    }
+}
+
+/* Submenú */
+
+/* ⚠ => El submenú no es compatible con dispositivos móviles (se mejorará en el futuro) <= ⚠ */
+
+.menu ul ul {
+    display: none;
+}
+
+.menu a span {
+    /* Sepera el icono de flecha hacia abajo de (Géneros) */
+    margin-left: 10px;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    position: absolute;
+    background: #065016;
+}
+
+/*
+
+
+
+
+/* Menú de la página   (antiguo menú)
+
+
+#menu ul {
+
+    list-style:none;
+    margin:7px;
+    padding:7px;
+   }
+   
+   /* items del menu 
+   
+   #menu ul li {
+    background-color:#35a772;
+    display: block;
+    border-right: 1px solid #fff;  /* Borde de la derecha (separador de elementos del menú) 
+   }
+   
+   /* enlaces del menu  (estilo genérico) de todas las páginas
+   
+   
+   #menu ul a {
+    display: block;
+    color:rgb(255, 255, 255);
+    text-decoration: none; 
+    font-weight:400;
+    font-size:15px;
+    padding:20px;
+    font-family:"Arial, HelveticaNeue", "Helvetica Neue", Helvetica,  sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;   
+   }
+   
+   
+   /* items del menu 
+   
+   #menu ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+    text-align: center;
+   }
+   
+   /* efecto al pasar el ratón por los items del menu 
+
+
+   #menu ul li:hover {
+    background:#5b78a7; 
+  
+    border-width: thin;
+    border-color: azure;
+    border-bottom: 90px;
+    border-bottom: solid;
+   }
+
+
+
+    /* menu desplegable 
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:99%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+   
+   /* items del menu desplegable 
+   
+   #menu ul ul li {
+    float:none;
+    width:150px
+   }
+   
+   /* enlaces de los items del menu desplegable 
+   
+   #menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+   
+   /* items del menu desplegable al pasar el ratón 
+   
+   #menu ul li:hover > ul {
+    display:block;
+   }
+
+
+
+
+
+
+   */
+
+/* Da formato al footer */
+
+footer {
+    background-color: #1a1a61;
+    border-top: 100px;
+    border-top: solid;
+    border-top-color: rgb(0, 255, 234);
+    padding-top: 100px;
+}
+
+footer p {
+    color: #f0f6fc;
+    font-size: 20px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-align: center;
+}
+
+footer p a {
+    color: #f0f6fc;
+    font-size: 20px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-align: center;
+    margin: 34%;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Formato de Posters de películas (caja) */
+
+.poster {
+    width: 20em;
+    border: 5px;
+    border: solid;
+}
+
+/* Formato de Posters de películas (datos de la caja) */
+
+.galeria {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    /*  Dispone las imágenes de forma horizontal  */
+    flex-wrap: wrap;
+    /*  Reagrupa las fotos según el tamaño de la ventana */
+}
+
+.galeria li {
+    margin: 7px;
+    ;
+}
+
+/* Formato de Posters de películas (imágen) */
+
+.galeria img {
+    width: 150px;
+}
+
+/* Estilo de ventana de peliculas */
+
+.container-all {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.container-all:target {
+    background-position: top;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .popup {
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.popup {
+    text-align: left;
+    /* Centra el contenido de la ventana emergente de película */
+    width: 10px 20px;
+    max-width: 777px;
+    min-width: 10px 20px;
+    height: 555px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+.container-text {
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.container-text h3 {
+    font-size: 30px;
+}
+
+.container-text p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.btn-close-popup {
+    width: 10px;
+    /* Tamaño botón de cierre */
+    height: 10px;
+    /* Tamaño botón de cierre */
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .popup {
+        flex-direction: column;
+        height: 100%;
+        max-height: 700px;
+    }
+    .container-text {
+        width: 100%;
+        height: 60%;
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container-text {
+        padding: 20px;
+    }
+    .container-text h3 {
+        font-size: 20px;
+    }
+    .container-text p {
+        font-size: 12px;
+    }
+}
+
+/* Estilos de botones de las ventanas emergentes */
+
+.boton_primario {
+    position: relative;
+    display: inline-block;
+    border: 3px solid #b71c1c;
+    padding: 15px 15px;
+    color: #00FF00;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #FF6600;
+    transition: color 0.5s, background 0.5s;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 30px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+.espacio_boton {
+    /* Pone blanca una línea para empujar y separar los botones */
+    color: white;
+}
+
+.boton_secundario {
+    background-color: transparent;
+}
+
+.boton_primario:hover {
+    color: black;
+    background-color: transparent;
+}
+
+.boton_secundario {
+    position: relative;
+    display: inline-block;
+    border: 3px solid #b71c1c;
+    padding: 15px 15px;
+    color: #0066CC;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.5s, background 0.5s;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 30px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+.boton_secundario:hover {
+    color: black;
+    background-color: #00FF00;
+}
+
+/* Contenedores de ventanas emergentes de las películas */
+
+.precio {
+    background-color: #00FF33;
+    position: relative;
+    display: inline-block;
+    border: 5px outset #7e1cb7;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 10px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+.resumen {
+    text-align: left;
+    padding: 5px 5px;
+    height: 5px 5px;
+    border: 3px dashed #95b71c;
+    padding: 1px 2px;
+    color: rgb(0, 0, 0);
+}
+
+.genero {
+    background-color: rgba(238, 255, 0, 0.822);
+    position: relative;
+    display: inline-block;
+    border: 4px outset #2c1cb7;
+    padding: 5px 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 3px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+.anio {
+    background-color: #d68910;
+    position: relative;
+    display: inline-block;
+    border: 4px outset #e74c3c;
+    padding: 5px 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 3px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+/* Estilos detalles (debajo de los carteles ) */
+
+.precio_pagina_principal {
+    background-color: #00FF33;
+    display: inline-block;
+    border: 5px outset #7e1cb7;
+    font-weight: 700;
+    padding: 10px;
+    margin: 15px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 10px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+.genero_pagina_principal {
+    background-color: rgba(238, 255, 0, 0.822);
+    display: inline-block;
+    border: 4px outset #2c1cb7;
+    padding: 5px 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 3px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+/* Efectos al pasar el ratón por encima de los carteles */
+
+.imagen_estilo :hover {
+    transition: 0.5s;
+    transform: scale(1.5);
+}
+
+/* Estilos de los carteles */
+
+.carteles {
+    border-style: outset;
+    border-width: 5px;
+    border-color: #fbc02d;
+}
+
+/* Estilos de la mini info (debajo de los carteles) */
+
+.mini_info {
+    margin: 7px 7px;
+    justify-content: center;
+    text-align: center;
+    max-width: 150px;
+}
+
+/* Estilos de formulario */
+
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.centrar_titulo_formulario {
+    text-align: center;
+    margin: 0;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    /* Dispone los campos uno debajo de otro */
+    margin-bottom: 20px;
+    /* Distancia entre campos */
+    padding: 7px;
+    /* Grosor de los campos */
+    box-sizing: border-box;
+    /* Ajusta los campos para que no se salgan del relleno del formulario */
+    font-size: 17px;
+    /* Tamaño de letra de los campos */
+    border: none;
+    /* Quita el último borde del formulario */
+    box-sizing: border-box;
+    /* Define estilo ovalado */
+    border-radius: 30px;
+    /* Aplica la medida del estilo ovalado */
+}
+
+/* Ajustes (bloqueos del campo "mensaje") */
+
+textarea {
+    min-height: 100px;
+    /* Mínima medida vertical del campo (hacia arriba) */
+    max-height: 200px;
+    /* Máximo medida vertical del campo (hacia abajo) */
+    max-width: 100%;
+    /* Máximo medida hacia hacia la derecha (impide que se salga del formulaio) */
+}
+
+/* Estilo del boton del formulario */
+
+.boton {
+    background: #495a63;
+    /* Color del boton */
+    color: white;
+    /* Color de letra */
+    padding: 20px;
+    /* Grosor del boton */
+    box-sizing: border-box;
+    /* Define el boton con borde ovalados */
+    border-radius: 30px;
+    /* Establece la medida de los bordes */
+}
+
+/* Estilos del boton al pasar el ratón */
+
+.boton:hover {
+    cursor: pointer;
+    /* Hace que la flecha del ratón se convierta en la mano de pulsar */
+}
+
+/* Estilo condicional "de tipo if"  para adaptar el formulario a pantallas estrechas */
+
+@media (max-width:480px) {
+    /* Formulario adaptable */
+    form {
+        width: 100%;
+    }
+}
+
+/* Estilos de ficha de peliculas */
+
+.ficha_pelicula {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 30px 25px;
+    border-color: white;
+    margin-top: 50px;
+    border-style: ridge;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+}
+
+.ficha_pelicula h3 {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 100;
+}
+
+.ficha_pelicula p {
+    margin-top: 30px;
+}
+
+.centrar_resumen {
+    width: 85%;
+    margin: auto;
+    background: white;
+    padding: 10px 20px;
+    border: 3px dashed #95b71c;
+    margin-top: 20px;
+    border-style: dashed;
+}
+
+/* Estilo condicional "de tipo if"  para adaptar la ficha a pantallas estrechas */
+
+@media (max-width:480px) {
+    /* Formulario adaptable */
+    form {
+        width: 100%;
+    }
+}

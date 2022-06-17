@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+#header{
+    background-image: url(img/camp.png);
+    background-position: 50%;
+}
+
+#header #nav #img{
+margin-left: 832px;
+padding-top: 2px;
+}
+
+#header #nav #icon-menu{
+   width: 79px;
+   background-color: #55b66a;
+   display: block;
+}
+
+#header #icon-menu{
+    position: absolute;
+    float: right;
+    padding-left: 1824px;
+    transition: all 300ms;
+}
+
+#header #icon-menu img{
+    transition: all 300ms;
+}
+
+
+#header #icon-menu img:hover{
+   transform: translateX(-20px);
+}
+
+
+/*Inicio menu*/
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+}
+.menuCSS3 a {
+    display: block;
+    padding: 25px;
+    font-family: fantasy;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+    transition: all 300ms;
+}
+.menuCSS3 a:hover {
+    background-color: #CC673B;
+}
+.menuCSS3 ul li ul {
+    display: none;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: block;
+}
+/*Fin menu*/
+h2{
+    position: absolute;
+    display: block;
+    margin-top: 77px;
+    margin-left: 10px;
+    color: rgba(17, 6, 6, 0.664);
+    font-size: 50px;
+}
+
+/*INICO MODAL*/
+.modal-contenido{
+    background-color:#55b66a;
+    width:300px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+border-radius: 10px;
+  }
+  .modal{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    background: rgba(255,255,255,0.25);
+box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .modal a{
+      color: #F9B53C;
+  }
+
+  .modal #cerrar {
+      width: 25px;
+      height: 25px;
+      margin-left: 309px;
+      margin-top: -23px;
+      margin-bottom: 10px;
+      background: #191C26;
+      border-radius: 100px;
+      transition: all 300ms;
+  }
+
+  .modal #cerrar a{
+      margin-left: 8px;
+  }
+
+  .modal img{
+      width: 100px;
+      height: 100px;
+      margin-left: 100px;
+      margin-top: 10px;
+  }
+/*Asi se hace que un modal aparezca cuando le das click, hace que deje de ser transparente*/
+
+  #mi-modal:target{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+/*FIN MODAL*/
+
+
+
+/*INICIO TARJETAS*/
+#cards{
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+#cards #card{
+    display:inline-block;
+    padding-left: 25px;
+}
+
+#card img:hover{
+    transform: scale(1.2, 1.2);
+    transition: all 400ms;
+    overflow: hidden;
+}
+
+#cards > #card > p{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    text-align: center;
+}
+
+#cards #card .type{
+    width: 39%;
+    display: block;
+    margin-left: 64px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #F9B53C;
+}
+#cards #card .price{
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 72px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #F9B53C;
+}
+
+/*FIN TARJETAS*/
+
+/*INICIO MENU DES
+#menu-des{
+    opacity: 0;
+    float: right;
+    width: 15%;
+    height: 400px;
+    background-color: #337c43;
+}
+
+#menu-des .content{
+    margin-top: 20px;
+}
+
+#menu-des .content ul{
+    list-style: none;
+    margin-left: 22px;
+}
+
+#menu-des .content ul li{
+    margin-bottom: 100px;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+#menu-des .content ul li a{
+    color: #F9B53C;
+}
+
+
+*/
+
+/*INICIO DE AÑADIDOR DE PELIS (adp)*/
+#adp img{
+    width: 150px;
+    height: 150px;
+    margin-left: 27%;
+    position: absolute;
+    margin-top: 25%;
+}
+
+#adp img:hover{
+    transform: rotate(360deg);
+    transition: all 1s;
+}
+
+
+/*FIN DE AÑADIDOR DE PELIS (adp)*/
+
+/*INICIO FOOTER*/
+#footer{
+    padding-top: 200px;
+    background-color: #48a55c;
+    border-top: 3px solid #2c6d3a;
+}
+
+#footer p{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: -100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#footer a{
+    width: 9%;
+    margin-left: 46%;
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+#footer a:hover{
+    color: rgba(17, 6, 6, 0.664);
+}
+
+/*FIN FOOTER*/
